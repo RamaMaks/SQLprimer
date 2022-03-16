@@ -1,0 +1,37 @@
+CREATE TABLE `testcase`.`sportmaster` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `ID Project` INT NULL,
+  `ID Priority` INT NULL,
+  `ID Type` INT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_bin;
+–
+use testcase;
+SELECT * FROM sportmaster;
+–
+SELECT * FROM sportmaster WHERE (id < 3) OR (ID_Priority is null);
+–
+SELECT * FROM sportmaster ORDER BY id DESC;
+–
+SELECT * FROM sportmaster WHERE id > 2 LIMIT 1;
+–
+DELETE FROM sportmaster WHERE id > 3;
+–
+DROP TABLE sportmaster;
+–
+INSERT INTO sportmaster (`name`) VALUES ('Регистрация с именем на кириллице, введенным в поле "имя” ’);
+INSERT INTO sportmaster (`name`) VALUES ('Регистрация с именем на латинице, введенным в поле "имя"');
+INSERT INTO sportmaster (`name`) VALUES ('Регистрация с корретным номером телефона , введенным в поле "телефон"');
+INSERT INTO sportmaster (`name`) VALUES ('Регистрация с корректным кодом подтверждения, введенным в поле "код подтверждения" ');
+INSERT INTO sportmaster (`name`) VALUES ('Регистрация с корректным e-mail, введенным в поле "e-mail" ');
+–
+UPDATE `testcase`.`sportmaster` SET `ID_Project` = '1', `ID_Priority` = '3', `ID_Type` = '1' WHERE (`id` = '1');
+UPDATE `testcase`.`sportmaster` SET `ID_Project` = '1', `ID_Priority` = '3', `ID_Type` = '1' WHERE (`id` = '2');
+UPDATE `testcase`.`sportmaster` SET `ID_Project` = '1', `ID_Priority` = '3', `ID_Type` = '1' WHERE (`id` = '3');
+UPDATE `testcase`.`sportmaster` SET `ID_Project` = '1', `ID_Priority` = '3', `ID_Type` = '1' WHERE (`id` = '4');
+UPDATE `testcase`.`sportmaster` SET `ID_Project` = '1', `ID_Priority` = '3', `ID_Type` = '1' WHERE (`id` = '5');
+UPDATE `testcase`.`sportmaster` SET `ID_Project` = '1', `ID_Priority` = '3', `ID_Type` = '1' WHERE (`id` = '6');
+–
